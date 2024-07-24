@@ -2,10 +2,10 @@ def main():
     file = "books/frankenstein.txt"
     with open(file) as f:
         file_contents = f.read()
-        words_counter = words_count(file_contents)
-        characters_dict = characters_count(file_contents)
-        sorted_dictionary = sort_dict(characters_dict)
-        report(file, words_counter, sorted_dictionary)
+    words_counter = words_count(file_contents)
+    characters_dict = characters_count(file_contents)
+    sorted_dictionary = sort_dict(characters_dict)
+    report(file, words_counter, sorted_dictionary)
 
 def words_count(content):
     words_split = content.split()
@@ -31,7 +31,7 @@ def report(file, words_counter, dictionary):
     print(f"--- Begin report of {file} ---")
     print(f"{words_counter} words found in the document \n")
     for character in dictionary:
-        print(f"The \'{character}\' character was found {dictionary[character]} times")
+        print(f"The '{character}' character was found {dictionary[character]} times")
     print(f"--- End report ---")
 
 if __name__ == "__main__":
